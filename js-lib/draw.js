@@ -251,6 +251,9 @@ ascii.DrawText.prototype.handleKey = function(value) {
     }
     this.state.drawValue(this.endPosition.add(new ascii.Vector(x, y)), text[i]);
     x++;
+    if (text.charCodeAt(i)>255){
+      x++;
+    }
   }
 };
 

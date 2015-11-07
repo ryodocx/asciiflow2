@@ -306,6 +306,9 @@ ascii.State.prototype.outputText = function(opt_box) {
     for (var i = start.x; i <= end.x; i++) {
       var val = this.getDrawValue(new ascii.Vector(i, j));
       line += (val == null || val == ERASE_CHAR) ? ' ' : val;
+      if (val != null && val.charCodeAt(0)>255){
+        i++;
+      }
     }
     // Trim end whitespace.
     output += line.replace(/\s+$/, '') + '\n';
@@ -326,18 +329,23 @@ ascii.State.prototype.fromText = function(value, offset) {
   }
   for (var j = 0; j < lines.length; j++) {
     var line = lines[j];
+    var x = 0
     for (var i = 0; i < line.length; i++) {
       var char = line.charAt(i);
       // Convert special output back to special chars.
       // TODO: This is a horrible hack, need to handle multiple special chars
       // correctly and preserve them through line drawing etc.
-      if (SPECIAL_VALUES.indexOf(char)  != -1) {
-        char = SPECIAL_VALUE;
+      // if (SPECIAL_VALUES.indexOf(char)  != -1) {
+      //   char = SPECIAL_VALUE;
+      // }
+      // if (ALT_SPECIAL_VALUES.indexOf(char) != -1) {
+      //   char = ALT_SPECIAL_VALUE;
+      // }
+      this.drawValue(new ascii.Vector(x, j).add(offset).subtract(middle), char);
+      x++
+      if (line.charCodeAt(i)>255){
+        x++;
       }
-      if (ALT_SPECIAL_VALUES.indexOf(char) != -1) {
-        char = ALT_SPECIAL_VALUE;
-      }
-      this.drawValue(new ascii.Vector(i, j).add(offset).subtract(middle), char);
     }
   }
 };
