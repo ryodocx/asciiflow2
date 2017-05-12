@@ -268,6 +268,7 @@ ascii.Controller.prototype.handleKeyDown = function(event) {
   if (event.keyCode == 40) { specialKeyCode = KEY_DOWN; }
   if (event.keyCode == 37) { specialKeyCode = KEY_LEFT; }
   if (event.keyCode == 39) { specialKeyCode = KEY_RIGHT; }
+  if (event.keyCode == 27) { specialKeyCode = KEY_ESCAPE; }
 
   if (specialKeyCode != null) {
     //event.preventDefault();

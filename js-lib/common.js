@@ -48,6 +48,7 @@ try {
 /** @const */ var KEY_DOWN = '<down>';
 /** @const */ var KEY_LEFT = '<left>';
 /** @const */ var KEY_RIGHT = '<right>';
+/** @const */ var KEY_ESCAPE = '<escape>';
 
 // http://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
 /** @const */ var TOUCH_ENABLED =

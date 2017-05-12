@@ -243,6 +243,12 @@ ascii.DrawText.prototype.handleKey = function(value) {
   var text = $('#text-tool-input').val();
   this.state.clearDraw();
   var x = 0, y = 0;
+
+  if (value == KEY_ESCAPE) {
+    $('#text-tool-widget').hide();
+    return;
+  }
+
   for(var i = 0; i < text.length; i++) {
     if (text[i] == '\n') {
       y++;

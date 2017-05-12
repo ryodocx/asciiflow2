@@ -7,3 +7,4 @@
 - alt + W  'move-button'
 - alt + T  'text-button'
 - alt + S  'select-button'
+- ESCAPE key  テキストボックスを閉じる (Close TextBox)
