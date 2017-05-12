@@ -1,22 +1,9 @@
-修改：
-
-* 去掉进入页面的动画，急性子没办法
-
-* 支持中文
-
-Follow the instructions to get asciiflow running locally.
-
-Compile the javascript:
-~/asciiflow2$ ./compile.sh
-
-If you get a permissions error:
-~/asciiflow2$ chmod a+x closure-compiler.jar
-
-Run a simple web server:
-~/asciiflow2$python -m SimpleHTTPServer
-
-Goto: http://localhost:8000/index.html
-
-When developing, use the Google JS linter, gjslint.
-
-Adding new source files will require a change to compile.sh.
+### ショートカット追加 (add shortcut)
+- alt + Z  'box-button'
+- alt + X  'line-button'
+- alt + C  'arrow-button'
+- alt + V  'freeform-button'
+- alt + Q  'erase-button'
+- alt + W  'move-button'
+- alt + T  'text-button'
+- alt + S  'select-button'
