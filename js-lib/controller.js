@@ -246,6 +246,22 @@ ascii.Controller.prototype.handleKeyDown = function(event) {
     if (event.keyCode == 88) { specialKeyCode = KEY_CUT; }
   }
 
+  if (event.altKey) {
+    var id = '';
+    if (event.keyCode == 90) { id = 'box-button'; }
+    if (event.keyCode == 88) { id = 'line-button'; }
+    if (event.keyCode == 67) { id = 'arrow-button'; }
+    if (event.keyCode == 86) { id = 'freeform-button'; }
+    if (event.keyCode == 81) { id = 'erase-button'; }
+    if (event.keyCode == 87) { id = 'move-button'; }
+    if (event.keyCode == 84) { id = 'text-button'; }
+    if (event.keyCode == 83) { id = 'select-button'; }
+
+    if (id != '' ){
+      this.handleDrawButton(id);
+    }
+  }
+
   if (event.keyCode == 8) { specialKeyCode = KEY_BACKSPACE; }
   if (event.keyCode == 13) { specialKeyCode = KEY_RETURN; }
   if (event.keyCode == 38) { specialKeyCode = KEY_UP; }
