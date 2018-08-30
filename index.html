@@ -90,7 +90,7 @@ button {
 }
 
 .info-description {
-  vertical-align: text-bottom;    
+  vertical-align: text-bottom;
   margin-left: 10px;
   display: inline-block;
   height: 30px;
@@ -141,7 +141,7 @@ button {
   text-align: center;
   padding-left: 0px;
 }
-  
+
   /* Move file tools to the bottom. */
 #file-tools {
   left: 0px;
@@ -496,14 +496,14 @@ textarea {
 <img id="logo-bar" src="images/logo-bar.gif" width="88" height="24" />
 
 <div id="draw-tools">
-  <button id="box-button" class="tool active box-image" title="Draw boxes"></button>
-  <button id="line-button" class="tool line-image" title="Draw connecting lines"></button>
-  <button id="arrow-button" class="tool arrow-image" title="Draw arrows"></button>
-  <button id="freeform-button" class="tool freeform-image" title="Freeform drawing"></button>
-  <button id="erase-button" class="tool erase-image" title="Erase square areas"></button>
-  <button id="move-button" class="tool move-image" title="Resize/move boxes and lines"></button>
-  <button id="text-button" class="tool text-image" title="Text tool"></button>
-  <button id="select-button" class="tool select-image" title="Select, copy, cut and move"></button>
+  <button id="box-button" class="tool active box-image" title="Draw boxes [alt+z]"></button>
+  <button id="line-button" class="tool line-image" title="Draw connecting lines [alt+x]"></button>
+  <button id="arrow-button" class="tool arrow-image" title="Draw arrows [alt+c]"></button>
+  <button id="freeform-button" class="tool freeform-image" title="Freeform drawing [alt+v]"></button>
+  <button id="erase-button" class="tool erase-image" title="Erase square areas [alt+q]"></button>
+  <button id="move-button" class="tool move-image" title="Resize/move boxes and lines [alt+w]"></button>
+  <button id="text-button" class="tool text-image" title="Text tool [alt+t]"></button>
+  <button id="select-button" class="tool select-image" title="Select, copy, cut and move [alt+s]"></button>
 </div>
 
 <div id="file-tools">
@@ -534,13 +534,13 @@ textarea {
         <p>Moving around.<br>
         Desktop: <span>Hold CTRL and drag the screen.</span><br>
         Mobile: <span>Drag quickly to move. Press and hold to start drawing. Pinch to zoom in/out.</span></p>
-        <div class="info-icon box-image"></div><div class="info-description">Draw boxes. <span>You can resize them later with the Resize tool.</span></div><br>
-        <div class="info-icon line-image"></div><div class="info-description">Draw lines. <span>Connect it to another line to change the orientation.</span></div><br>
-        <div class="info-icon arrow-image"></div><div class="info-description">Draw arrows. <span>Connect it to another line to change the orientation.</span></div><br>
-        <div class="info-icon freeform-image"></div><div class="info-description">Draw freehand. <span>Press a character on the keyboard and draw with it.</span></div><br>
-        <div class="info-icon erase-image"></div><div class="info-description">Erase. <span>Drag out an area to remove its contents from the canvas.</span></div><br>
-        <div class="info-icon move-image"></div><div class="info-description">Resize boxes and lines. <span>Drag a line to change its size/shape.</span></div><br>
-        <div class="info-icon text-image"></div><div class="info-description">Type text. <span>Click and type where you'd like to add text to the canvas.</span></div><br>
+        <div class="info-icon box-image"></div><div class="info-description">[alt+z] Draw boxes. <span>You can resize them later with the Resize tool.</span></div><br>
+        <div class="info-icon line-image"></div><div class="info-description">[alt+x] Draw lines. <span>Connect it to another line to change the orientation.</span></div><br>
+        <div class="info-icon arrow-image"></div><div class="info-description">[alt+c] Draw arrows. <span>Connect it to another line to change the orientation.</span></div><br>
+        <div class="info-icon freeform-image"></div><div class="info-description">[alt+v] Draw freehand. <span>Press a character on the keyboard and draw with it.</span></div><br>
+        <div class="info-icon erase-image"></div><div class="info-description">[alt+q] Erase. <span>Drag out an area to remove its contents from the canvas.</span></div><br>
+        <div class="info-icon move-image"></div><div class="info-description">[alt+w] Resize boxes and lines. <span>Drag a line to change its size/shape.</span></div><br>
+        <div class="info-icon text-image"></div><div class="info-description">[alt+t] Type text. <span>Click and type where you'd like to add text to the canvas.</span></div><br>
         <br>
         <!-- <div class="info-icon-file drive-image"></div><div class="info-description">Save. <span>Connect to Google Drive to save your work automatically.</span></div><br> -->
         <div class="info-icon-file export-image"></div><div class="info-description">Export. <span>Copy your work to use it outside of ASCIIFlow.</span></div><br>
@@ -566,7 +566,7 @@ textarea {
     <div class="dialog-button-bar">
         <button class="close-dialog-button">Close</button>
         <button id="import-submit-button">Import</button>
-  </div>  
+  </div>
 </div>
 
 <!-- These dialogs are handled seperately. -->
@@ -621,7 +621,7 @@ if (width > 750) {
 
 
 <link rel="stylesheet" type="text/css" href="addtohomescreen.css">
-<script src="addtohomescreen.min.js"></script>
+<!-- <script src="addtohomescreen.min.js"></script> -->
 
 <script>
 // window.setTimeout(function() { $('#logo-interstitial').hide(); }, 3000);
